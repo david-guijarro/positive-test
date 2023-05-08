@@ -1,0 +1,1 @@
+KontentModelGenerator --projectid "b40e027e-9350-0022-fe3c-c78861f77fba" --namespace "BookStore.Data" --outputdir "Data/" --withtypeprovider True 

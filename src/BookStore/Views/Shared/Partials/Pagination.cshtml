@@ -1,0 +1,19 @@
+@model Pagination
+
+<nav aria-label="Book list pagination">
+    <ul class="pagination">
+        <li class="@(Model.CurrentPage == 1 ? "page-item disabled":"page-item")">
+            <a class="page-link" href="/page/@(Model.CurrentPage -1)" tabindex="-1">Previous</a>
+        </li>
+        @for (int i = 1; i <= Model.PagesCount; i++)
+        {
+            var active = Model.CurrentPage == i ? "active" : "";
+            <li class="page-item @active">
+                <a class="page-link" href="/page/@i">@i</a>
+            </li>
+        }
+        <li class="@(Model.PagesCount == Model.CurrentPage ? "page-item disabled":"page-item")">
+            <a class="page-link" href="/page/@(Model.CurrentPage +1)">Next</a>
+        </li>
+    </ul>
+</nav>

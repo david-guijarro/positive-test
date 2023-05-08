@@ -1,0 +1,22 @@
+﻿@model Details
+
+<h1 class="display-4 text-center">@Model.Book.Name</h1>
+<div class="card border-primary mb-3" style="">
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">
+            <strong>Author:
+            </strong>@Model.Book.Author</li>
+        <li class="list-group-item">
+            <strong>Category:
+            </strong>@Model.Book.Category</li>
+        <li class="list-group-item">
+            <strong>Release Date:
+            </strong>@Model.Book.ReleaseDate.Value.ToShortDateString()</li>
+        <li class="list-group-item">
+            <strong>Description:
+            </strong>@Model.Book.Description</li>
+    </ul>
+</div>
+<div class="text-center">
+    <a href="@Model.Referer">Back</a>
+</div>
